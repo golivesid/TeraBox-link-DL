@@ -66,8 +66,8 @@ const sendStartMessage = (chatId) => {
         parse_mode: 'Markdown',
         reply_markup: {
             inline_keyboard: [
-                [{ text: '〇 𝐉𝐨𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐓𝐨 𝐔𝐬𝐞 𝐌𝐞 〇', url: 'https://t.me/seeuhub' }],
-                [{ text: '🔗 How to use Bot 🔗', url: 'https://t.me/seeuhub' }]
+                [{ text: '〇 𝐉𝐨𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐓𝐨 𝐔𝐬𝐞 𝐌𝐞 〇', url: 'https://t.me/terao2' }],
+                [{ text: '🔗 How to use Bot 🔗', url: 'https://t.me/terao2' }]
             ]
         }
     }).catch(error => {
@@ -87,7 +87,7 @@ bot.onText(/\/start/, async (msg) => {
                 parse_mode: 'Markdown',
                 reply_markup: {
                     inline_keyboard: [
-                        [{ text: "✨ Any Help? ✨", url: "https://t.me/seeuhub" }]
+                        [{ text: "✨ Any Help? ✨", url: "https://t.me/terao2" }]
                     ]
                 }
             }).catch(error => {
@@ -181,7 +181,7 @@ bot.on('message', async (msg) => {
             bot.sendMessage(chatId, `❌ *That is not a valid TeraBox link.*`, {
                 reply_markup: {
                     inline_keyboard: [
-                        [{ text: "✨ Read the message ✨", url: "https://t.me/seeuhub" }]
+                        [{ text: "✨ Read the message ✨", url: "https://t.me/terao2" }]
                     ]
                 }
             }).catch(error => {
@@ -211,7 +211,7 @@ bot.on('message', async (msg) => {
         bot.sendMessage(chatId, `🔄 *Processing your link...*`).then(sentMessage => {
     const messageId = sentMessage.message_id;
 
-    axios.get(`https://tera.ronok.workers.dev/?link=${text}&apikey=30e048cd861b5524b81744d3461e78910593c3ba`)
+    axios.get(`https://www.terabox.tech/play.html?url=${text}&apikey=30e048cd861b5524b81744d3461e78910593c3ba`)
         .then(response => {
             const downloadUrl = response.data.url;
 
@@ -224,7 +224,7 @@ bot.on('message', async (msg) => {
                 reply_markup: {
                     inline_keyboard: [
                         [{ text: 'ᢱ Watch/Download ⎙', url: downloadUrl }],
-                        [{ text: '✨ Read the message ✨', url: 'https://t.me/seeuhub' }]
+                        [{ text: '✨ Read the message ✨', url: 'https://t.me/terao2' }]
                     ]
                 }
             }).catch(error => {
