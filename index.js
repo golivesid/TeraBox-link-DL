@@ -211,7 +211,7 @@ bot.on('message', async (msg) => {
         bot.sendMessage(chatId, `🔄 *Processing your link...*`).then(sentMessage => {
     const messageId = sentMessage.message_id;
 
-    axios.get(`https://opabhik.serv00.net/Watch.php?url=${text}&apikey=30e048cd861b5524b81744d3461e78910593c3ba`)
+    axios.get(`https://opabhik.serv00.net/Watch.php?url=${text}&apikey=1c2c416a76be7c207886877add5e904bd9aa1a44`)
         .then(response => {
             const downloadUrl = response.data.url;
 
